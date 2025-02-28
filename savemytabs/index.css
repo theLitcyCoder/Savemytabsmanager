@@ -1,0 +1,1614 @@
+/*** GLOBALL ***/ 
+body {
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    margin: 0;
+}
+
+/* For logo */
+.logo{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo img{
+    margin: 18px 0;
+}
+
+.logo h1, .profilesection{
+    color: white;
+}
+
+/* any input textbox */
+input {
+    border: 1px solid #c2e4ae;
+    border-radius: 20px;
+    /* padding: 10px 10px; */
+    width: 400px;
+    box-sizing: border-box;
+    /* margin-bottom: 4px; */
+    font-size: 1.5em;
+    margin: 10px 5px;
+    padding: 5px;
+}
+
+/* Button */
+button {
+    background-color: #397219;
+    color: #ffffff;
+    width: auto;
+    /* padding: 4px 20px; */
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 20px;
+    /* outline: 2px #F2AA4CFF solid; */
+    outline: 2px #514d49 solid;
+    cursor: pointer;
+    border: 1px solid #c2e4ae;
+    /* margin: 0 5px; */
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+
+/*** Body ***/
+.mainPageBody, .profilePageBody {
+    /* min-width: 550px; */
+    min-width: 777px;
+    background-color: #101820ff;
+    text-align: center;
+}
+
+
+/*** Main ***/
+.mainHome {
+    margin: 0 9px 60px 9px;
+    height: 100%;
+}
+
+.mainHome h1{
+    color: #ffe73c;
+    height: 26px;
+    font-family: fangsong;
+}
+
+
+/*** TOP HALF SUB TOP HALF ***/
+/* Input text box */
+#input-btn{
+    background-color: #508ec9;
+    border: 1px solid #93d0ed;
+    color: #ffffff;
+    width: auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 20px;
+    /* outline: 2px #514d49 solid; */
+    cursor: pointer;
+    border: 1px solid #c2e4ae;
+    transform: translateX(-111%);
+    padding: 5px 6px 5px 6px;
+    margin: 10px 0px;
+}
+
+#input-btn:hover{
+    background-color: #5394d7e6;
+}
+
+#input-container{
+    display: flex;
+    justify-content: center;
+    /* margin-top:8px; */
+}
+
+input#input-el {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5px 5px 5px 11px;
+    /* margin-left: 53px; */
+    width: 241px;
+}
+
+/* Add folder button */
+#add-folder-btn {
+    display: flex;
+    margin-top: 3px;
+    cursor: pointer;
+    color: white;
+    height: 34px;
+    width: 163px;
+    background-color: #3a82bfab;
+    border: 1px solid #85b6ff;
+    padding: 8px 10px 10px 10px;
+    gap: 10px;
+}
+
+#upgrade2{
+    display: flex;
+    margin-top: 3px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    height: 34px;
+    width: 183px;
+    background-color: #e7be50;
+    border: 1px solid #686157;
+    padding: 8px 10px 10px 10px;
+    gap: 10px;
+    box-shadow: 0px 0px 10px 5px yellow;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+#upgrade2 i {
+    font-size: 18px;
+    margin-top: 7px;
+}
+
+@keyframes glow {
+    0% {
+      box-shadow: 0 0 5px yellow;
+    }
+    50% {
+      box-shadow: 0 0 20px yellow;
+    }
+    100% {
+      box-shadow: 0 0 5px yellow;
+    }
+  }
+  
+  .glowing-box {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 2px solid yellow;
+    animation: glow 1.5s infinite ease-in-out;
+  }
+  
+#add-folder-btn:hover{
+    background-color: #5394d7e6;
+}
+
+#add-folder-btn i {
+    font-size: 18px;
+}
+
+/* Add folder icon button */
+#tab-btn{
+    display: flex; 
+    align-items: center; 
+    border: none; 
+    background: none; 
+    cursor: pointer;
+    height: 34px;
+    margin-bottom: 18px;
+    background-color: #6dff6d45;
+    border: 1px solid #61cb61;
+}
+
+#tab-btn:hover{
+    background-color: #7fb87393;
+}
+
+#tab-btn span{
+    margin-left: 5px;
+}
+
+/* SEARCH BAR */
+#search-bar {
+    width: 100%;
+    padding: 8px 40px 8px 16px; /* Adjust padding to leave space for the button */
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.search-container i {
+    font-size: 16px; /* Adjust icon size */
+    color: #000000;
+    transform: translateX(-380%);
+}
+
+
+/*** CUSTOM POPUPS ***/
+#modalInputOne, #modalInputDouble, #modalInputDouble2{
+    font-size: 14px;
+}
+
+#validation-message {
+    font-size: 16px;
+    color: red;
+    width: 291px;
+}
+
+#validation-message.addMarginBottom{
+    margin-bottom: 20px;
+}
+
+#modalMessage, #modalMessageOne, #modalMessageDouble, #modalMessageAlert{
+    font-size: 15px;
+}
+
+
+/** Folder **/
+/* Edit/Copy Folder Button */
+button.edit-folder-button, button.copy-url-btn{
+    padding: 0 0 0 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 0;
+}
+
+button.edit-folder-button{
+    color: #adeda2;
+    /* margin: none; */
+}
+
+button.copy-url-btn{
+    color: #75b7ff;
+}
+
+button.edit-folder-button:hover, button.edit-link-button:hover{
+    color: #d5f0d0d2;
+}
+
+button.copy-url-btn:hover {
+    color: #b6d9ff;
+}
+
+.btn {
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* margin-top: 11px; */
+    font-size: 1em;
+}
+
+.folder-modify-container {
+    display: flex;
+    margin: 0;
+    /* padding: 18px 0 0 0; */
+    padding: 14px 0 5px 18px;
+    justify-content: left;
+    gap: 5px;
+}
+
+.folder-checkbox {
+    appearance: auto; /* Ensure checkboxes are shown properly */
+    margin: 5px 0;
+    display: flex;
+    grid-gap: 14px;
+    border-radius: 35px;
+    outline: 0;
+    margin: 0;
+    justify-content: center;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    z-index: 2;
+}
+
+.folder-item {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    color: wheat;
+}
+
+.folder-checkbox {
+    margin-right: 10px;
+}
+
+.folder-content, #current-tabs-list{
+    justify-items: center;
+    grid-gap: 10px;
+    padding: 0;
+    list-style-type: none;
+    background-color: #5c5c5c3b;
+    width: 455px;
+    border-top-right-radius: 35px; 
+}
+
+#tab2 .folder-content, #current-tabs-list{
+    background: none;
+    display: flex;
+    width: auto;
+}
+
+.folder-content{
+    width: 567px;
+}
+
+.folder-content .leadItems, .tabItems, .lead-Items {
+    font-size: 1.1em;
+    overflow-wrap: break-word;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* border-radius: 10px; */
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    gap: 22px;
+    border-bottom: 1px solid gray;
+}
+
+
+
+/*** LEADS ***/
+/** Main Leads **/ 
+.title{
+    display: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 200px;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.timestamp {
+    width: 100%;
+    font-size: 12px;
+    color: #9f9f9f;
+    text-align: right;
+    /* margin-top: 10px; */
+}
+
+.favicon {
+    width: 22px;
+    height: 22px;
+    /* margin-right: 10px; */
+}
+
+.url {
+    font-size: 12px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.url:hover {
+    text-decoration: underline;
+}
+
+/* Search Leads */
+.lead-Items {
+    font-size: 1.1em;
+    overflow-wrap: break-word;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* border-radius: 10px; */
+    width: 100%;
+    gap: 22px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.lead-Items div.btn-container {
+    display: flex;
+    /* justify-content: end; */
+    gap: 10px;
+    /* width: 179px; */
+    /* width: 164px; */
+}
+
+.lead-Items .url-container a{
+    display: inline-flex;
+    /* font-size: 1.3em; */
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* width: 399px; */
+    /* width: 250px; */
+}
+
+.lead-Items .url-container .url-Subcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.lead-Items .url-container .url-Subcontainer img{
+    width: 18px;
+    height: 18px;
+    margin-left: 18px;
+}
+
+.lead-Items .url-container{
+    /* width: 350px; */
+    width: 388px;
+}
+
+.folder-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.folder-header span{
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+/**** TABS ****/
+/* Style for tab buttons */
+.tabs {
+    max-width: 760px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tab-buttons {
+    display: flex;
+    /* background: #007BFF; */
+}
+
+.tab-button {
+    flex: 1;
+    padding: 8px 16px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    transition: background 0.3s ease;
+    border-bottom: 1px solid white;
+    border-radius: 20px 20px 0 0;
+}
+
+.tab-button:hover {
+    background: #5d6e7f;
+}
+
+.tab-button.active {
+    background: #fdff7659;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    border-radius: 20px 20px 0 0;
+}
+
+.tab-content {
+    padding: 6px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Hide the default file input button */
+#fileInput {
+    display: none; /* Hides the default input */
+}
+
+.top-half{
+    display: flex;
+    height: 120px;
+    width: 100%;
+    justify-content: center;
+}
+
+.folder-button.drag-over {
+    border: 2px dashed #007bff;
+    background-color: #f0f8ff;
+}
+
+/** TAB 2 - CURRENT ACTIVE TABS **/
+#tab2 .folders-container #current-tabs-list{
+    border-top-left-radius: 35px;
+    width: auto;
+    flex-wrap: wrap;
+}
+
+#tab2 .folders-container #current-tabs-list .window-section h3{
+    color: white;
+}
+
+#tab2 .folders-container{
+    justify-content: space-around;
+}
+
+#current-tabs-list{
+    width: 587px;
+}
+
+.tabItems {
+    font-size: 1.1em;
+    overflow-wrap: break-word;
+    display: flex !important;
+    align-items: center;
+    padding: 10px;
+    border-top-left-radius: 35px;
+    /* border-radius: 10px; */
+    /* width: 100%; */
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+#tab2 .tabItems {
+    padding: 2px 0;
+    margin: 0;
+}
+
+#tab2 .tabItems .url-container {
+    display: flex;
+    gap: 4px;
+}
+
+.tabItems div.btn-container{
+    display: flex;
+    gap: 10px;
+    width: 164px;
+}
+
+.window-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #5c5c5c3b;
+    width: 335px;
+}
+
+.window-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.tabItems {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.session-container.icon-only .tabItems .url-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+}
+
+ .session-container .tabItems .url-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 320px;
+}
+
+
+.tabItems .url-container a{
+    display: inline-flex;
+    /* font-size: 1.3em; */
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* width: 399px; */
+    width: 237px;
+}
+
+.tabItems .url-container .favicon{
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
+
+/** SESSION TAB **/
+#tab3 .folders-container {
+    margin-top: 20px;
+    display: block;
+    color: white;
+}
+
+.session-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.session-item button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.session-item button:hover {
+    background-color: #ddd;
+}
+
+
+.session-container .tabItems{
+    flex-direction: column;
+}
+
+/* Close current tab */
+.close-tab-button{
+    background: none;
+    outline: none;
+    color: #ff0700;
+    border: none;
+    padding: 2px 3px 0px 3px;
+}
+
+.close-tab-button:hover{
+    background-color: #c0625f7c;
+}
+
+/* Icon-only view */
+/* Default detailed view */
+.url-container {
+    /* display: flex; */
+    align-items: center;
+    gap: 10px;
+}
+
+.url-container .favicon {
+    width: 24px;
+    height: 24px;
+}
+
+.session-title-container button:last-child{
+    background-color: #d9534f;
+}
+
+/* Icon-only grid view */
+/* Container for the session links */
+.icon-only .session-items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
+    /* gap: 15px; 
+    padding: 20px;
+    border: 2px solid #ddd;  */
+    border-radius: 8px; /* Rounded corners for the container */
+    background-color: #2d2d2d;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    max-width: 400px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    width: 143px;
+}
+
+.icon-only .session-items-container .tabItems{
+    border-bottom: none;
+}
+
+/* Styling for individual icon blocks */
+.icon-only .url-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 15px; */
+    /* background-color: #fff; */
+    /* border: 1px solid #ccc;  */
+    border-radius: 8px; /* Rounded corners for icons */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* height: 80px;  */
+}
+
+/* Hover effects for individual blocks */
+.icon-only .url-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for icons */
+.icon-only .favicon {
+    width: 19px;
+    height: 19px;
+}
+
+/* Hide links if only icons are to be displayed */
+.icon-only .url-container a {
+    display: none;
+}
+
+#sessions-link{
+    /* width: 710px; */
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#sessions-link.align{
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: center;
+    gap: 1rem; /* Optional: Add spacing between items */
+}
+
+.session-container {
+    background-color: #242729;
+    border-radius: 5% 5% 0 0;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.savedSessionTitle {
+   font-size: 20px;
+}
+
+/** SORTING **/
+/** SORT FOLDER **/
+/* Slider switch styling */
+.switch {
+    position: relative;
+    /* display: inline-block; */
+    width: 42px;
+    height: 17px;
+    /* margin-left: 10px; */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: -1px;
+    bottom: 0px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+
+#sortOrderLabel{
+    display: none;
+}
+
+.sortingFolders, .sortingLeads{
+    color: white;
+    /* text-align: left; */
+    display: flex;
+    gap: 10px;
+    /* margin-top: 8px; */
+    padding: 3px;
+    justify-content: center;
+}
+
+label.sortOrder, label.sortOrderLinks{
+    font-size: 11px;
+    color: white;
+}
+
+.subfilter p{
+    font-size: 11px;
+    margin: 2px;
+}
+
+input:checked + .slider {
+    background-color: yellow;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+div.subfilter{
+    width: 77px;
+    margin-top: 4px;
+}
+
+
+/*** ADD FOLDER ***/
+.addfolder{
+    display: flex;
+    color: white;
+}
+
+.addfolder div i{
+    font-size: 30px;
+}
+
+.addfolder div{
+    background-color: grey;
+}
+
+
+
+/** gotta continue from here **/
+
+/* input.edit-input {
+    padding: 6px 0 6px 6px;
+    font-size: 1em;
+    font-weight: 600;
+    width: 139px;
+}
+
+.url-container .edit-input{
+    margin-top: 5px;
+} */
+
+
+
+
+
+
+
+
+/* button.delete{
+    color: #d54e4e;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+button.save{
+    color: #c2e4ae;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+button.cancel, .cancel-folder-button{
+    color: #e8ebe7;
+    background-color: transparent;
+    border: none;
+    outline: none;
+} */
+
+/* .cancel-folder-button i{
+    font-size: 1.45em;
+} */
+
+
+
+
+/*search items*/
+
+
+/* .lead-Items div.url-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
+
+
+
+
+
+.folders-container.foldersContainerStyle{
+    width: 600px;
+}
+
+/* Highlight hidden tabs with a unique background color and border */
+.highlight-hidden {
+    background-color: #fdd835; /* A yellow shade for highlighting */
+    border: 2px solid #ffeb3b; /* Yellow border to make it stand out */
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+span#current-folder-name {
+    text-transform: uppercase;
+}
+
+
+.folders-container-container, #displaycurrenttabs{
+    padding: 5px;
+    border-radius: 35px;
+}
+
+.folders-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 11px 5px 5px 5px;    /* background-color: #333333; */
+    border-radius: 35px;
+    /* padding-bottom: 10px; */
+}
+
+.folder-buttons {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    width: 187px;
+    margin-bottom: 2px;
+    /* text-align: left; */
+}
+
+/* Folder buttons and delete buttons */
+#delete-selected-folders-btn,
+#delete-selected-links-btn {
+    display: flex;
+    background: none;
+    color: #d9534f;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    /* border-radius: 5px; */
+    /* margin-top: 5px; */
+}
+
+#delete-selected-folders-btn i,
+#delete-selected-links-btn i {
+    font-size: 1.8em;
+}
+
+#delete-selected-folders-btn i:hover,
+#delete-selected-links-btn i:hover {
+    color: #c9302c;
+}
+
+
+input.url-checkbox:hover, #select-all-folders-btn:hover,.url-checkbox-container:hover{
+    cursor: pointer;
+}
+
+/* Checkboxes */
+input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+
+ /* Hide the default checkbox */
+ input[type="checkbox"] {
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+}
+
+/* Checkbox when checked */
+input[type="checkbox"]:checked {
+    /* border-color: #4CAF50; */
+    accent-color: yellow;
+}
+
+/* Checkmark style */
+
+
+.folders-container-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 17px;
+}
+
+.checkboxcontainer p{
+    /* width: 68px; */
+    margin: 0;
+    /* padding: 0 0 5px; */
+    /* margin-top: 10px; */
+}
+
+.selectdeleteallfoldercontainer, .selectdeleteallleadscontainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 9px;
+}
+
+
+.allfoldercontainer, .allleadcontainer {
+    display: flex;
+    gap: 39px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+input#input-fcb, #search-bar {
+    /* font-weight: 600;
+    width: 267px;
+    font-size: 16px; */
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5px 5px 5px 11px;
+    margin-right: 30px;
+    width: 240px;
+}
+
+.folder-button .edit-input{
+    margin-left: 10px;
+}
+
+.edit-folder-button, .copy-url-btn{
+    margin: 7px 0;
+    font-size: 14px;
+}
+
+.folder-buttons button {
+    margin: 7px 0;
+    display: flex;
+    grid-gap: 14px;
+    border-radius: 35px;
+    outline: 0;
+    /* margin: 0; */
+    justify-content: center;
+    border: none;
+    border-radius: 0; 
+    font-size: 14px;
+    padding-right: 7px;
+}
+
+.folder-button .active span{
+    padding: 0 5px;
+}
+
+.folder-buttons .folder-button span{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #b5e1fb;
+}
+
+.folder-buttons .folder-button {
+    color: white;
+}
+
+.folder-button {
+    display: grid;
+    color: #000;
+    padding: 10px 1px 1px 17px;
+    cursor: pointer;
+    cursor: pointer;
+    width: auto;
+    background:none;
+    z-index: 1;
+    /* border-top: 1px solid #676767; */
+    /* border-bottom: 1px solid #676767; */
+}
+
+.folder-button:first-child{
+    border-top-left-radius: 35px;
+    border-top:none;
+}
+
+.folder-button:last-child {
+    border-bottom-left-radius: 17px;
+    border-bottom:none;
+}
+
+#delete-el
+{
+    background-color:  #ec5b5bd2;
+    color: #ffffff;
+}
+
+button.delete-folder-button{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #d54e4e;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+button.save-folder-button{
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #4ed555;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+button.cancel-folder-button{
+    display: block;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.folder-buttons .active {
+    background-color: #5c5c5c3b;
+    color: white;
+}
+
+.folder-button.highlight, .leadItems.highlight{
+    background-color: #975649; 
+}
+
+.leadItems .url-container .url-Subcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.leadItems .url-container .url-Subcontainer img{
+    width: 18px;
+    height: 18px;
+    margin-left: 18px;
+}
+
+.leadItems .url-container{
+    display: block;
+    /* width: 364px; */
+    width: 412px;
+}
+
+input.url-checkbox{
+    /* margin: 10px 5px; */
+    margin: 10px 10px 10px 10px;
+}
+
+
+.url-container div div{
+    color: rgb(192, 184, 173);
+    font-size: 0.6em;
+}
+
+.leadItems .url-container div a{
+    /* font-size: 1.3em; */
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 259px;
+    text-align: left;
+}
+
+/* Cursor for normal drag hover */
+.leadItems {
+    position: relative; 
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.leadItems:active {
+    cursor: grabbing; /* Change cursor during interaction */
+}
+
+/* Cursor when actively dragging */
+.leadItems.grabbing {
+    transform: scale(1.05);
+    cursor: grabbing;
+    
+}
+
+.snap-in {
+    animation: snap-in 0.2s ease-in-out; /* Optional: Snap-in effect when entering drop area */
+    background-color: #322f2f; 
+}
+
+@keyframes snap-in {
+    0% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.leadItems .btn-container {
+    display: flex;
+    /* justify-content: end; */
+    gap: 5px;
+    /* width: 168px; */
+}
+
+
+div.btn-container .save{
+    padding: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: #f5f5f5;
+    text-align: center;
+    /* padding: 10px; */
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 10px;
+} 
+
+  /* Profile Icon */
+header h1, #profile-details{
+    color: white;
+}
+
+
+
+.feature-content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+/* #profile-icon-container {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+} */
+
+/* #profile-icon {
+    font-size: 1.8em;
+    color: #ffffff;
+    cursor: pointer;
+} */
+
+#profile-icon:hover {
+    color: #c2e4ae;
+}
+
+
+#profile-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#profile-button a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+}
+
+svg#pro {
+    padding-left: 5px;
+}
+
+
+
+
+
+/** CHANGE VIEW **/
+#toggleViewButton:hover {
+    cursor: pointer;
+}
+
+.changeViewContainer{
+    display: flex;
+    gap: 212px;
+}
+
+/* Sign-in Link */
+/* #signin-link {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.3em;
+    margin-left: 10px;
+} */
+
+
+
+
+/* Modal (popup) styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+  }
+
+  .modal-content {
+    background-color: rgb(10, 10, 10);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    color: wheat;
+  }
+
+  .modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .modal button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .leads-list{
+    padding: 0;
+  }
+
+  /* .leads-container {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+} */
+
+/* .lead-item {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+} */
+
+#update-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it appears on top of other elements */
+}
+
+.hidden {
+    display: none;
+}
+
+
+/** EXPORT **/
+button .fa-file-export, button .fa-file-import, .fa-sign-in-alt{
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+button.export-files-btn, #file-label, .profile-icon {
+    font-size: 13px;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+#import-button, #profile-button{
+    display: flex;
+    justify-content: center;
+}
+
+.profile-icon .fa-user-circle{
+    margin-right: 2px;
+}
+
+button .fa-sync{
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+button.reload-ext-btn {
+    font-size: 13px;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+/*** MENU ***/
+.menu-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Hamburger icon styling */
+.menu-icon {
+    cursor: pointer;
+    width: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu-icon div {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    background-color: #172f47;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 150px;
+}
+
+.dropdown-menu .menu-links{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+
+}
+
+.dropdown-menu .menu-links:hover{
+    background-color: #365285;
+    color: yellow;
+    cursor: pointer;
+}
+
+/** EXPORT **/
+i.fas.fa-file-export.fa-lg, i.fas.fa-sync.fa-lg, i.fas.fa-file-import.fa-lg {
+    line-height: 1;
+    margin-right: 4px;
+}
+
+
+
+
+/** IMPORT **/
+
+
+/** RELOAD BUTTON **/
+
+
+
+
+
+
+
+/* Lifted effect for the dragged item */
+.lifted {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    opacity: 0.9;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Snap-in effect */
+.snap-in {
+    transition: transform 0.2s ease;
+    animation: snapInAnimation 0.2s forwards;
+    transform: scale(1.02);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+ .folder-button.dragging {
+    opacity: 0.5;
+}
+h2{
+    color: white;
+}
+
+
+
+.result-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.result-checkbox {
+    margin-right: 10px;
+}
+
+
+
+/* .text-container {
+    display: flex;
+    flex-direction: column;
+} */
+
+
+
+/*** profile active plan***/
+
+.profile-feature-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.profile-price{
+    color: white;
+}
+
+.profile-feature {
+    /* background-color: #f9f9f9; */
+    border-bottom: 1px solid #ddd;
+    padding: 1px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.profile-feature:last-child {
+    border-bottom: none;
+}
+
+.profile-feature:hover {
+    /* background-color: #ffeb3b; */
+    box-shadow: 0 0 10px yellow;
+}
+
+.profile-feature-name {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-feature-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 0 15px;
+}
+
+.profile-feature.active + .profile-feature-content {
+    max-height: 150px; /* Adjust based on content */
+    padding: 10px 15px;
+}
+
+.profile-plan-free {
+    font-size: 18px;
+    color: #62ff62;
+}
+
+

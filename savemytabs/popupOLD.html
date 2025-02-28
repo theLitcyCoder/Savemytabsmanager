@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="ExtPay.js"></script>
+    <script defer src="popup.js"></script>
+</head>
+<body> 
+    <header>
+        <div id="auth-container"></div>
+            <div id="profile-icon-container">
+                <a href="profile.html" id="profile-link" style="display: none;">
+                    <i class="fas fa-user-circle" id="profile-icon"></i>
+                </a>
+                <a href="#" id="signin-link" style="display: none;">Sign In</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>SaveMyTabs Manager</h1>
+        <input type="text" id="input-el" placeholder="Enter URL & Save or Click Save Tab">
+        <div id="validation-message"></div>
+        <div class="btn">
+            <button id="input-btn">Save Input</button> 
+            <button id="tab-btn">Save Tab</button>
+        </div>
+    
+        <div class="folder-header">
+            <span>Current Folder: <span id="current-folder-name"></span></span>
+        </div>
+    
+        <!-- <div class="folders-container-container">
+            <div class="folders-container-buttons">
+                <button id="delete-el">Delete All Folders</button> 
+                <button id="delete-selected-folders-btn" style="display:none;">Delete Selected Folders</button>
+                <button id="delete-selected-links-btn" style="display:none;">Delete Selected Links</button>
+                
+                <button id="add-folder-btn"><i class="fa-solid fa-plus"></i> &nbsp;Add Folder</button>
+                <div class="search-container" id="search-container">
+                    <input type="text" id="search-bar" placeholder="Search URLs">
+                    <i class="fas fa-search"></i>
+                </div>
+                <button id="delete-el">Delete All Links</button>
+            </div>
+            <div class="folders-container">
+                <div class="folder-buttons" id="folder-buttons">
+                
+                </div>
+                <div class="folder-content" id="folder-content">
+                   
+                </div>
+            </div>
+        </div> -->
+        <div class="folders-container-buttons">
+            <button id="select-all-folders-btn">Select All Folders</button>
+            <button id="select-all-items-btn">Select All Items</button>
+            <button id="delete-el">Delete All Links</button>
+
+            <button id="delete-selected-folders-btn" style="display:none;">Delete Selected Folders</button>
+            <button id="delete-selected-links-btn" style="display:none;">Delete Selected Links</button>
+            <button id="add-folder-btn">Add Folder</button>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search URLs">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        <div class="folders-container">
+            <div class="folder-buttons" id="folder-buttons">
+                <!-- Folder checkboxes and names will go here -->
+                <div class="folder-button">
+                    <input type="checkbox" class="folder-checkbox" id="folder1">
+                    <span>Folder 1</span>
+                </div>
+            </div>
+            <div class="folder-content" id="folder-content">
+                <!-- URL checkboxes and names will go here -->
+                <div class="url-container">
+                    <input type="checkbox" class="url-checkbox" id="url1">
+                    <span class="url-title">Example URL 1</span>
+                </div>
+            </div>
+        </div>
+        <ul id="ul-el" style="display:none;"></ul>
+    </main>
+
+     <!-- The Modal-->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <input type="text" id="modalInput" placeholder="Enter value here">
+            <button id="submitModal">Submit</button>
+        </div>
+    </div>
+
+     <!-- The Modal 2-->
+     <div id="customModal2" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage2"></p>
+            <input type="text" id="modalInput2" placeholder="Enter Title here">
+            <input type="text" id="modalInput3" placeholder="Enter URL here">
+            <button id="submitModal2">Submit</button>
+        </div>
+    </div>
+
+    <!-- The Modal 1 -->
+    <div id="customModal3" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage3"></p>
+            <input type="text" id="modalInput4" placeholder="Enter Title here">
+            <button id="submitModal3">Submit</button>
+        </div>
+    </div>
+
+    <!-- Alert -->
+    <div id="customModal4" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage4"></p>
+            <p id="modalAlert"> </p>
+            <button id="submitModal4">Ok</button>
+        </div>
+    </div>
+   
+    <footer>
+        <span style="vertical-align:50%;">2024</span> 
+        <a href='https://ko-fi.com/W7W3Y1M2C' target='_blank'>
+            <img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/brandasset/kofi_button_red.png' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+        </a>
+    </footer>
+</body>
+</html>

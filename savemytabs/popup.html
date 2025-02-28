@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+</head>
+<body class="mainPageBody">
+    <header>
+        <div class="menu-container">
+            <div class="menu-icon" id="menu-icon">
+                <!-- Hamburger icon (3 lines) -->
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <div class="menu-links" id="upgrade"></div>
+                <div class="menu-links" id="signIn"></div>
+                <div class="menu-links" id="import-button"></div>
+                <div class="menu-links" id="export-button"></div>
+                <div class="menu-links" id="reloadButton"></div>
+            </div>
+        </div>
+        <div id="profile-button" class="menu-links">
+            <a href="profile.html" >
+                <svg id="pro" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white" stroke="white" width="30" height="30">
+                    <path d="M256 73.825a182.175 182.175 0 1 0 182.18 182.18A182.177 182.177 0 0 0 256 73.825zm0 71.833a55.05 55.05 0 1 1-55.054 55.046A55.046 55.046 0 0 1 256 145.658zm.52 208.723h-80.852c0-54.255 29.522-73.573 48.885-90.906a65.68 65.68 0 0 0 62.885 0c19.363 17.333 48.885 36.651 48.885 90.906z" data-name="Profile"/>
+                </svg>
+                <span>(profile)</span>       
+            </a>
+        </div>
+        
+        <!-- <div id="fullscreenContainer" class="menu-links">
+            <a href="popup.html">
+                <svg id="fullscreen" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
+                    <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"/>
+                </svg>  
+                <span>(Fullscreen)</span>
+            </a>
+        </div> -->
+        <div id="auth-container"></div>
+    </header>
+    <main class="mainHome">
+        <div class="logo">
+            <img src="icon.png" alt="logo" height="25" width="25">
+            <h1>SaveMyTabs Manager</h1>
+        </div>
+        <div class="top-half">
+            <div class="sub-top-half">
+                <div id="input-container">
+                    <input type="text" id="input-el" placeholder="Enter URL & Save">
+                    <span id="input-btn">Save</span>
+                </div>
+                <div id="validation-message"></div>
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="Search Links">
+                    <i class="fas fa-search"></i>
+                </div>
+                <button id="upgrade2" class="glowing-box">
+                    <i class="fas fa-solid fa-arrow-up-from-bracket fa-lg" style="color: #000000;"></i>
+                    <span>Upgrade</span>
+                </button> 
+            </div>
+           
+            <div class="sub-top-half">
+                    <div class="btn">
+                        <!-- <button id="input-btn">Save Input</button> -->
+                        <button id="tab-btn"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path d="M3 4h18c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm18 2H3v4h18V6z"/>
+                            </svg>
+                            <span>Save Current Tab </span>
+                        </button>
+                        <button id="add-folder-btn">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <span>Add New Folder</span>
+                        </button>                  
+                    </div>   
+                </div>
+            </div>
+    
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="tab1" id="tab1button"></button>
+                <button class="tab-button" data-tab="tab2" id="tab2button"></button>
+                <button class="tab-button" data-tab="tab3" id="tab3button"></button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-panel active" id="tab1">
+                    <div class="folders-container-buttons">      
+                        <div class="checkboxcontainer">
+                            <div class="selectdeleteallfoldercontainer">
+                                <div class="subfilter">
+                                    <input type="checkbox" id="select-all-folders-btn">
+                                    <p style="color: white;">(Select All)</p>
+                                </div>
+                                <div class="sectionColor">
+                                    <div class="sortingFolders">
+                                        <label class="switch">
+                                            <input type="checkbox" id="sortOrder"/>
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>  
+                                    <label for="sortOrder" class="sortOrder">(Sort Folders)</label>
+                                </div>
+                                <div class="subfilter2">
+                                    <button id="delete-selected-folders-btn" style="visibility:hidden;"><i class="fas fa-trash-alt fa-lg"></i></button>
+                                </div>
+                            </div>    
+                        </div>
+<!-- 
+                        <div class="checkboxcontainer">
+                            <div class="fullscreenContainer">
+                                <div class="subfilter" id="toggleViewButton">
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd" d="M4.857 3A1.857 1.857 0 0 0 3 4.857v4.286C3 10.169 3.831 11 4.857 11h4.286A1.857 1.857 0 0 0 11 9.143V4.857A1.857 1.857 0 0 0 9.143 3H4.857Zm10 0A1.857 1.857 0 0 0 13 4.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 21 9.143V4.857A1.857 1.857 0 0 0 19.143 3h-4.286Zm-10 10A1.857 1.857 0 0 0 3 14.857v4.286C3 20.169 3.831 21 4.857 21h4.286A1.857 1.857 0 0 0 11 19.143v-4.286A1.857 1.857 0 0 0 9.143 13H4.857Zm10 0A1.857 1.857 0 0 0 13 14.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 21 19.143v-4.286A1.857 1.857 0 0 0 19.143 13h-4.286Z" clip-rule="evenodd"/>
+                                    </svg>                                                                         
+                                    <p style="color: white;">(Fullscreen)</p>
+                                </div>
+                            </div>
+                        </div>
+         -->
+                        <div class="checkboxcontainer">
+                            <div class="selectdeleteallleadscontainer">
+                                <div class="subfilter2">
+                                    <button id="delete-selected-links-btn" style="visibility:hidden;"><i class="fas fa-trash-alt fa-lg"></i></button>
+                                </div>
+                                <div class="sectionColor">
+                                    <div class="sortingLeads">
+                                        <label class="switch">
+                                            <input type="checkbox" id="sortOrderLinks"/>
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                    <label for="sortOrder" class="sortOrder">(Sort Links)</label>
+                                </div>
+                               
+                                <div class="subfilter">
+                                    <input type="checkbox" id="select-all-links-btn">
+                                    <p class="subfilterlinks" style="color: white;">(All Links)</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="folders-container">
+                        <div class="folder-buttons" id="folder-buttons"></div>
+                        <div class="folder-content" id="folder-content"></div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="tab2">
+                    <!-- <button id="saveSession">Save As Session</button> -->
+                    <div class="folders-container">
+                        <div id="current-tabs-list"></div>
+                    </div>
+                   
+                </div>
+                <div class="tab-panel" id="tab3">
+                    <div class="folders-container">
+                        <div class="changeViewContainer">
+                            <div class="subfilter" id="toggleViewButton">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M4.857 3A1.857 1.857 0 0 0 3 4.857v4.286C3 10.169 3.831 11 4.857 11h4.286A1.857 1.857 0 0 0 11 9.143V4.857A1.857 1.857 0 0 0 9.143 3H4.857Zm10 0A1.857 1.857 0 0 0 13 4.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 21 9.143V4.857A1.857 1.857 0 0 0 19.143 3h-4.286Zm-10 10A1.857 1.857 0 0 0 3 14.857v4.286C3 20.169 3.831 21 4.857 21h4.286A1.857 1.857 0 0 0 11 19.143v-4.286A1.857 1.857 0 0 0 9.143 13H4.857Zm10 0A1.857 1.857 0 0 0 13 14.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 21 19.143v-4.286A1.857 1.857 0 0 0 19.143 13h-4.286Z" clip-rule="evenodd"/>
+                                </svg>                                                                         
+                                <p style="color: white;">(Change View)</p>
+                                
+                            </div>
+                            <h3 class="savedSessionTitle">Saved Sessions</h3>
+                        </div>
+                        
+                        <div id="sessions-link"></div>
+                        <div id="sessions-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+     
+
+        <!-- Section to display current tabs -->
+        <!-- <section id="displaycurrenttabs" style="display: none;">
+            <h2>Current Tabs</h2>
+           
+        </section> -->
+
+        <ul id="ul-el" style="display:none;"></ul>
+    </main>
+
+    <!-- The Modal -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <input type="text" id="modalInput" placeholder="Enter value here">
+            <button id="submitModal">Submit</button>
+        </div>
+    </div>
+
+    <!-- Additional Modals -->
+    <div id="customModalDouble" class="modal">
+        <div class="modal-content">
+            <p id="modalMessageDouble"></p>
+            <input type="text" id="modalInputDouble" placeholder="Enter Title here">
+            <input type="text" id="modalInputDouble2" placeholder="Enter URL here">
+            <button id="submitModalDouble">Submit</button>
+        </div>
+    </div>
+    
+    <div id="customModal3" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage3"></p>
+            <input type="text" id="modalInput4" placeholder="Enter Title here">
+            <button id="submitModal3">Submit</button>
+        </div>
+    </div>
+
+    <div id="customModalOne" class="modal">
+        <div class="modal-content">
+            <p id="modalMessageOne"></p>
+            <input type="text" id="modalInputOne" placeholder="Enter Title here">
+            <button id="submitModalOne">Submit</button>
+        </div>
+    </div>
+
+    <!-- Alert -->
+    <div id="customAlert" class="modal">
+        <div class="modal-content">
+            <p id="modalMessageAlert"></p>
+            <p id="modalAlert"></p>
+            <button id="submitModal4">Ok</button>
+        </div>
+    </div>
+
+    <div id="update-button" class="hidden">
+        New Update Available! <button onclick="updateExtension()">Update Now</button>
+    </div>
+
+    <!-- <div id="export-button" class="hidden"> -->
+ 
+    <footer>
+       <span style="vertical-align:50%;">Copyright © 2025 Alicia Harewood (TheLitcyCoder)</span>
+       <p>Contact: <a href="mailto:thelitcycoderwebdev@gmail.com" style="color: #007bff;">thelitcycoderwebdev@gmail.com</a></p>
+    </footer>
+
+    <script src="firebase/firebase-app-compat.js"></script> 
+    <script src="firebase/firebase-firestore-compat.js"></script>
+   <script src="firebase/firebase-database-compat.js"></script>
+   <script src="ExtPay.js"></script>
+   
+   <script src="popup.js"></script>
+</body>
+</html>
+

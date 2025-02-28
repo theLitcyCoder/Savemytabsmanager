@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <script src="profile.js" defer></script> -->
+</head>
+<body class="profilePageBody">
+    <div class="logo">
+        <img src="icon.png" alt="logo" height="25" width="25">
+        <h1>SaveMyTabs Manager</h1>
+    </div>
+    <main>
+        <h1 class="profilesection">User Profile</h1>
+        <div id="profile-details">
+            <p>Paid: <span id="paid">Loading...</span></p>
+            <p>Email: <span id="email">Loading...</span></p>
+            <p>Subscription Status: <span id="status">Loading...</span></p>
+            <p id="profile-account-type"></p>
+            <!-- <button id="refresh">Refresh Status</button> -->
+        </div>
+            <div id="profile-plan">
+                <h2 class="paid">Pro One-Time Payment Plan - CURRENT PLAN</h2>
+                <h2 class="basicc">Free Basic Plan - CURRENT PLAN</h2>
+                <div class="profile-price paid"> $2.99 Paid</div>
+                <!-- <div class="profile-price basic"> FREE</div> -->
+                <div class="profile-feature-container">
+                    <div class="profile-feature basic both">
+                        <div class="profile-feature-name">Save Tabs/Links <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Quickly save open tabs or specific links for later access.</div>
+                    </div>
+                    <div class="profile-feature basic both">
+                        <div class="profile-feature-name">Create New Folder <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Organize your saved links by creating custom folders.</div>
+                    </div>
+                    <div class="profile-feature basic both">
+                        <div class="profile-feature-name">Modify Links/Folders (Save, Edit, Delete) <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Easily update or remove saved links and folders.</div>
+                    </div>
+                    <div class="profile-feature paid">
+                        <div class="profile-feature-name">Search Saved Links by Folder <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Find specific links quickly by searching within folders.</div>
+                    </div>
+                    <div class="profile-feature basic both">
+                        <div class="profile-feature-name">Links/Folders Sorting <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Sort saved links and folders for better organization.</div>
+                    </div>
+                    <div class="profile-feature paid">
+                        <div class="profile-feature-name">Drag-and-Drop Links Reordering <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Reorder your saved links easily using drag-and-drop functionality.</div>
+                    </div>
+                    <div class="profile-feature paid">
+                        <div class="profile-feature-name">Export (CSV) File - Sessions Saved and Folders with the Links <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Download your saved sessions and folders as a CSV file.</div>
+                    </div>
+                    <div class="profile-feature paid">
+                        <div class="profile-feature-name">Import (CSV) File - Sessions Saved and Folders with the Links <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Upload a CSV file to restore your saved sessions and folders.</div>
+                    </div>
+                    <div class="profile-feature basic both">
+                        <div class="profile-feature-name">Active Tabs <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">View and manage currently open tabs.</div>
+                    </div>
+                    <div class="profile-feature paid">
+                        <div class="profile-feature-name">Reveal Hidden Active Tabs <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Keep specific active tabs hidden for privacy.</div>
+                    </div>
+                    <div class="profile-feature paid">
+                        <div class="profile-feature-name">Save Tab Session <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Save an entire session of open tabs for later use.</div>
+                    </div>
+                    <div class="profile-feature paid">
+                        <div class="profile-feature-name">Maintenance & Updates - Limited Updates (Critical Fixes) <span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Receive important bug fixes and maintenance updates.</div>
+                    </div>
+                    <div class="profile-feature basic both">
+                        <div class="profile-feature-name">Support Level - Email Support<span class="profile-plan-free">✔</span></div>
+                        <div class="profile-feature-content">Get help via email support when needed.</div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <script src="ExtPay.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
