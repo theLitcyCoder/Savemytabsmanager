@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "version": "0.0.0.8",
+    "version": "0.0.0.9",
     "name": "SaveMyTabs Manager",
     "author": "Alicia Harewood",
     "description":"SaveMyTabs Manager can be used to save URL from current tab. Build a list of targeted leads to keep track of.",
